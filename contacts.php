@@ -8,9 +8,9 @@ use GuzzleHttp\Client;
 $client = new Client();
 
 // Prevent CORS error
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST');
-header("Access-Control-Allow-Headers: X-Requested-With");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
 
 // let's disable this OPTION method for now to get rid of the error
 if ($_SERVER['REQUEST_METHOD'] === "OPTIONS") {
